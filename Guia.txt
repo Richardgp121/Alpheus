@@ -1,0 +1,95 @@
+======================================================================
+GUÍA RÁPIDA DE GIT - REPOSITORIO: CONTROLES-DE-CALIDAD (frlizarazo)
+======================================================================
+Ruta de la carpeta: R:\GitHUB\Controles de calidad
+Rama de pruebas / desarrollo: BETA
+Rama estable / final: MAIN
+
+PASO 0: CÓMO ABRIR LA TERMINAL EN LA CARPETA
+
+    Opción A (La más fácil en Windows):
+
+        Abre el Explorador de archivos y entra a la carpeta:
+        R:\GitHUB\Controles de calidad
+
+        Haz clic en un espacio blanco de la carpeta con el BOTÓN DERECHO.
+
+        Selecciona "Open Git Bash here" (o "Abrir en la terminal").
+
+    Opción B (Desde la barra de direcciones):
+
+        Entra a la carpeta R:\GitHUB\Controles de calidad.
+
+        Haz clic arriba en la barra donde aparece la ruta de la carpeta.
+
+        Escribe "cmd" o "powershell" y presiona ENTER.
+
+        Opción C (Escribiendo la ruta manualmente):
+
+        Abre tu terminal o Git Bash desde el menú de inicio.
+
+        Escribe y presiona ENTER:
+            cd /d "R:\GitHUB\Controles de calidad"
+
+PASO 1: COMPROBACIONES INICIALES (VERIFICAR DÓNDE ESTÁS)
+
+    Verificar si estás en la carpeta correcta:
+        En Git Bash:
+        pwd
+
+        En CMD / Símbolo del sistema de Windows:
+        cd
+
+        En PowerShell:
+        Get-Location
+
+    Verificar en qué rama te encuentras actualmente:
+        git branch
+        (Debes ver un asterisco al lado de BETA, por ejemplo: * BETA)
+
+        Si no estás en la rama BETA o necesitas cambiarte a ella:
+
+        Si la rama BETA ya existe:
+        git checkout BETA
+
+        Si es la primera vez y la rama BETA no existe localmente:
+        git checkout -b BETA
+
+Verificar el estado actual de los archivos:
+git status
+
+PASO 2: DESCARGAR LA INFORMACIÓN MÁS RECIENTE (ANTES DE TRABAJAR)
+
+Siempre realiza este paso antes de editar o guardar nuevos archivos:
+
+Asegúrate de estar en la rama BETA:
+git checkout BETA
+
+Descarga los últimos cambios hechos por el equipo:
+git pull origin BETA
+
+PASO 3: SUBIR TUS CAMBIOS Y PRUEBAS A GITHUB
+
+Cuando termines de trabajar y quieras subir la información:
+
+Revisa qué cambios detectó Git:
+git status
+
+Agrega todos los archivos nuevos o modificados:
+git add .
+
+Guarda los cambios con un mensaje explicativo:
+git commit -m "Explicación breve de los cambios realizados"
+
+Sube los cambios a la rama BETA de GitHub:
+git push origin BETA
+
+PASO 4: COMPROBACIÓN FINAL (VERIFICAR QUE TODO SE SUBIÓ)
+
+Ejecuta nuevamente:
+git status
+(Debe decir: "nothing to commit, working tree clean")
+
+Ver los últimos commits realizados para confirmar el tuyo:
+git log --oneline -n 5
+======================================================================
